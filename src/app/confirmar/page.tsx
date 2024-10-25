@@ -1,41 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Logo from '../favicon.ico'
+import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeMenuItem, setActiveMenuItem] = useState<number | null>(null);
-  const [tabSelect, setTabSelect] = useState<number | null>(null);
-  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
-  const toggleMenuItem = (index: number) => {
-    setActiveMenuItem(activeMenuItem === index ? null : index);
-  };
-  const toggleTab = (index: number) => {
-    setTabSelect(tabSelect === index ? null : index);
-  };
 
   return (
     <div>
       <div className="bg-white">
-        <header className="relative bg-white">
-
-         
-
-          <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="flex h-16 items-center">
-                
-
-                <div className="ml-4 mt-20 flex lg:ml-0">
-                <a href="/loja">
-                  <span className="sr-only">Sua Empresa</span>
-                  <img src={Logo.src} className='h-24' alt="" />
-                  
-                </a>
-            </div>
-            </div>
-          </nav>
-        </header>
+        <Header/>
         <section className="py-12 relative">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full flex-col justify-start items-start gap-8 inline-flex">
@@ -66,26 +39,26 @@ export default function Home() {
                                 <h5 className="w-full text-gray-500 text-base font-normal leading-relaxed min-[550px]:my-0 my-2 max-[550px]:text-center">Product ID: 4553458120</h5>
                             </div>
                         </div>
-                        <div className="w-full flex items-center justify-between flex-col min-[550px]:flex-row w-full max-sm:max-w-xl max-xl:mx-auto gap-2">
+                        <div className="flex items-center justify-between flex-col min-[550px]:flex-row w-full max-sm:max-w-xl max-xl:mx-auto gap-2">
                             <h5 className="w-full max-w-[142px] text-center text-black text-lg font-medium leading-relaxed">40</h5>
                             <button className="max-w-[160px] flex items-center w-full mx-0 justify-center gap-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M18 12H6" stroke="#111827" stroke-width="1.6" stroke-linecap="round"></path>
+                                    <path d="M18 12H6" stroke="#111827" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </svg>
                                 <input type="text" className="w-12 h-12 focus:outline-none text-gray-900 placeholder-gray-900 text-lg font-medium leading-relaxed px-2.5 bg-white rounded-full border border-gray-200 justify-center items-center flex" placeholder="01"/>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 6V18M18 12H6" stroke="#111827" stroke-width="1.6" stroke-linecap="round"></path>
+                                    <path d="M12 6V18M18 12H6" stroke="#111827" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </svg>
                             </button>
                             <h5 className="max-w-[142px] w-full text-center text-black text-lg font-medium leading-relaxed pl-5">R$125.00</h5>
                             <button className="group max-w-[176px] text-center w-full flex items-center justify-center transition-all duration-700 ease-in-out">
                                 <svg className="text-gray-500 group-hover:text-gray-900 transition-all duration-700 ease-in-out"  xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                 <g filter="url(#filter0_d_484_1442)">
-                                <path d="M13.5 13.5L26.5 26.5M26.5 13.5L13.5 26.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                                <path d="M13.5 13.5L26.5 26.5M26.5 13.5L13.5 26.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </g>
                                 <defs>
-                                <filter id="filter0_d_484_1442" x="-2" y="-1" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <filter id="filter0_d_484_1442" x="-2" y="-1" width="44" height="44" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
                                 <feOffset dy="1"></feOffset>
                                 <feGaussianBlur stdDeviation="1"></feGaussianBlur>
@@ -113,22 +86,22 @@ export default function Home() {
                             <h5 className="w-full max-w-[142px] text-center text-black text-lg font-medium leading-relaxed">39</h5>
                             <button className="max-w-[160px] flex items-center w-full mx-0 justify-center gap-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M18 12H6" stroke="#111827" stroke-width="1.6" stroke-linecap="round"></path>
+                                    <path d="M18 12H6" stroke="#111827" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </svg>
                                 <input type="text" className="w-12 h-12 focus:outline-none text-gray-900 placeholder-gray-900 text-lg font-medium leading-relaxed px-2.5 bg-white rounded-full border border-gray-200 justify-center items-center flex" placeholder="02"/>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 6V18M18 12H6" stroke="#111827" stroke-width="1.6" stroke-linecap="round"></path>
+                                    <path d="M12 6V18M18 12H6" stroke="#111827" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </svg>
                             </button>
                             <h5 className="max-w-[142px] w-full text-center text-black text-lg font-medium leading-relaxed pl-5">R$135.00</h5>
                             <button className="group max-w-[176px] text-center w-full flex items-center justify-center transition-all duration-700 ease-in-out">
                                 <svg className="text-gray-500 group-hover:text-gray-900 transition-all duration-700 ease-in-out"  xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                 <g filter="url(#filter0_d_484_1442)">
-                                <path d="M13.5 13.5L26.5 26.5M26.5 13.5L13.5 26.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                                <path d="M13.5 13.5L26.5 26.5M26.5 13.5L13.5 26.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </g>
                                 <defs>
-                                <filter id="filter0_d_484_1442" x="-2" y="-1" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <filter id="filter0_d_484_1442" x="-2" y="-1" width="44" height="44" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
                                 <feOffset dy="1"></feOffset>
                                 <feGaussianBlur stdDeviation="1"></feGaussianBlur>
@@ -156,22 +129,22 @@ export default function Home() {
                             <h5 className="w-full max-w-[142px] text-center text-black text-lg font-medium leading-relaxed">41</h5>
                             <button className="max-w-[160px] flex items-center w-full mx-0 justify-center gap-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M18 12H6" stroke="#111827" stroke-width="1.6" stroke-linecap="round"></path>
+                                    <path d="M18 12H6" stroke="#111827" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </svg>
                                 <input type="text" className="w-12 h-12 focus:outline-none text-gray-900 placeholder-gray-900 text-lg font-medium leading-relaxed px-2.5 bg-white rounded-full border border-gray-200 justify-center items-center flex" placeholder="02"/>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 6V18M18 12H6" stroke="#111827" stroke-width="1.6" stroke-linecap="round"></path>
+                                    <path d="M12 6V18M18 12H6" stroke="#111827" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </svg>
                             </button>
                             <h5 className="max-w-[142px] w-full text-center text-black text-lg font-medium leading-relaxed pl-5">R$135.00</h5>
                             <button className="group max-w-[176px] text-center w-full flex items-center justify-center transition-all duration-700 ease-in-out">
                                 <svg className="text-gray-500 group-hover:text-gray-900 transition-all duration-700 ease-in-out"  xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                 <g filter="url(#filter0_d_484_1442)">
-                                <path d="M13.5 13.5L26.5 26.5M26.5 13.5L13.5 26.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                                <path d="M13.5 13.5L26.5 26.5M26.5 13.5L13.5 26.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"></path>
                                 </g>
                                 <defs>
-                                <filter id="filter0_d_484_1442" x="-2" y="-1" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <filter id="filter0_d_484_1442" x="-2" y="-1" width="44" height="44" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
                                 <feOffset dy="1"></feOffset>
                                 <feGaussianBlur stdDeviation="1"></feGaussianBlur>
@@ -188,20 +161,7 @@ export default function Home() {
                 </div>
                 
                 <div className="w-full p-5 rounded-xl border border-gray-200 flex-col justify-start items-center gap-4 flex">
-                <div className="w-full justify-between items-center gap-6 inline-flex">
-
-                <label className="flex items-center mb-1.5 text-gray-400 text-sm font-medium">Cupom</label>
-              <div className="flex pb-4 w-full">
-                <div className="relative w-full">
-                  <input type="text" className="block w-full h-11 pr-11 pl-5 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg placeholder-gray-500 focus:outline-gray-400" placeholder="xxxx xxxx xxxx" />
-                </div>
-              </div>
-              <div className="flex items-center">
-                <button className="rounded-lg mt-4 w-full bg-black py-2.5 px-4 text-white text-sm font-semibold text-center mb-8 transition-all duration-500 hover:bg-black/80">
-                  Aplicar
-                </button>
-              </div>
-                    </div>
+                
                     <div className="w-full justify-between items-center gap-6 inline-flex">
 
                         <h5 className="text-gray-600 text-lg font-normal leading-8">Subtotal:</h5>
@@ -221,16 +181,14 @@ export default function Home() {
                 <a href="/loja"className="w-full px-6 py-2.5 rounded-xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-indigo-600 hover:border-transparent hover:bg-indigo-50 transition-all duration-700 ease-in-out justify-center items-center flex"><button>
                   <span className="px-2 py-px text-center text-indigo-600 text-lg font-semibold leading-8">Cancelar</span>
                 </button></a>
-                <a className="w-full px-6 py-3 bg-indigo-600 hover:bg-indigo-700 transition-all duration-700 ease-in-out rounded-xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"><button  >
+                <a href="/loja" className="w-full px-6 py-3 bg-indigo-600 hover:bg-indigo-700 transition-all duration-700 ease-in-out rounded-xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"><button >
                   <span className="px-2 text-center text-white text-lg font-semibold leading-8">Confirmar Compra</span>
                 </button></a>
                 
               </div>
         </div>
     </section>
-                                            
-
-                                            
+    <Footer/>                                  
     </div>
 </div>
 
