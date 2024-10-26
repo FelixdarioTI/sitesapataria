@@ -6,14 +6,8 @@ import { useRouter } from 'next/navigation';
 import Footer from '@/app/components/Footer';
 export default function Home() {
     const router = useRouter();
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [activeMenuItem, setActiveMenuItem] = useState<number | null>(null);
     const [tabSelect, setTabSelect] = useState<number>(1);
-  
-    const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
-    const toggleMenuItem = (index: number) => {
-      setActiveMenuItem(activeMenuItem === index ? null : index);
-    };
+
     const toggleTab = (index: number) => {
       setTabSelect(index);
     };

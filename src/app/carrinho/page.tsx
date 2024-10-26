@@ -46,7 +46,7 @@ export default function Home() {
               <div className="flex flex-col max-[500px]:items-center gap-3">
                 <h6 className="font-semibold text-base leading-7 text-black">Air Jordan 1 Rosa</h6>
                 <h6 className="font-normal text-base leading-7 text-gray-500">Tênis</h6>
-                <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">R$135.00</h6>
+                <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">R135.00</h6>
               </div>
             </div>
             <div className="flex items-center max-[500px]:justify-center h-full max-md:mt-3">
@@ -65,7 +65,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center max-[500px]:justify-center md:justify-end max-md:mt-3 h-full">
-              <p className="font-bold text-lg leading-8 text-gray-600 text-center transition-all duration-300 group-hover:text-indigo-600">$135.00</p>
+              <p className="font-bold text-lg leading-8 text-gray-600 text-center transition-all duration-300 group-hover:text-indigo-600">135.00</p>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Home() {
               <div className="flex flex-col max-[500px]:items-center gap-3">
                 <h6 className="font-semibold text-base leading-7 text-black">Air Jordan 1 Azul e Vermelho</h6>
                 <h6 className="font-normal text-base leading-7 text-gray-500">Tênis</h6>
-                <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">R$135.00</h6>
+                <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">R135.00</h6>
               </div>
             </div>
             <div className="flex items-center max-[500px]:justify-center h-full max-md:mt-3">
@@ -102,7 +102,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center max-[500px]:justify-center md:justify-end max-md:mt-3 h-full">
-              <p className="font-bold text-lg leading-8 text-gray-600 text-center transition-all duration-300 group-hover:text-indigo-600">$270.00</p>
+              <p className="font-bold text-lg leading-8 text-gray-600 text-center transition-all duration-300 group-hover:text-indigo-600">270.00</p>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function Home() {
               <div className="flex flex-col max-[500px]:items-center gap-3">
                 <h6 className="font-semibold text-base leading-7 text-black">Air Jordan 1 Azul</h6>
                 <h6 className="font-normal text-base leading-7 text-gray-500">Tênis</h6>
-                <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">R$135.00</h6>
+                <h6 className="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-indigo-600">R135.00</h6>
               </div>
             </div>
             <div className="flex items-center max-[500px]:justify-center h-full max-md:mt-3">
@@ -138,7 +138,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center max-[500px]:justify-center md:justify-end max-md:mt-3 h-full">
-              <p className="font-bold text-lg leading-8 text-gray-600 text-center transition-all duration-300 group-hover:text-indigo-600">$135.00</p>
+              <p className="font-bold text-lg leading-8 text-gray-600 text-center transition-all duration-300 group-hover:text-indigo-600">135.00</p>
             </div>
           </div>
         </div>

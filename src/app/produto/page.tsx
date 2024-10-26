@@ -49,7 +49,7 @@ export default function Home() {
 
                         <div className="flex flex-col min-[400px]:flex-row min-[400px]:items-center mb-8 gap-y-3">
                             <div className="flex items-center">
-                                <h5 className="font-manrope font-semibold text-2xl leading-9 text-gray-900 ">R$ 125.00 </h5>
+                                <h5 className="font-manrope font-semibold text-2xl leading-9 text-gray-900 "> 125.00 </h5>
                                 <span className="ml-3 font-semibold text-lg text-indigo-600">30% off</span>
                             </div>
                             <svg className="mx-5 max-[400px]:hidden" xmlns="http://www.w3.org/2000/svg" width="2"
@@ -214,7 +214,7 @@ export default function Home() {
                     </div>
                     <div className="px-5 py-3">
                       <h3 className="text-gray-700 uppercase">Jordan 1</h3>
-                      <span className="text-gray-500 mt-2">R$12</span>
+                      <span className="text-gray-500 mt-2">12</span>
                     </div>
                   </div>
                   <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
@@ -241,7 +241,7 @@ export default function Home() {
                     </div>
                     <div className="px-5 py-3">
                       <h3 className="text-gray-700 uppercase">Homem Kit</h3>
-                      <span className="text-gray-500 mt-2">R$12</span>
+                      <span className="text-gray-500 mt-2">12</span>
                     </div>
                   </div>
                   <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
@@ -268,7 +268,7 @@ export default function Home() {
                     </div>
                     <div className="px-5 py-3">
                       <h3 className="text-gray-700 uppercase">Jordan 1</h3>
-                      <span className="text-gray-500 mt-2">R$12</span>
+                      <span className="text-gray-500 mt-2">12</span>
                     </div>
                   </div>
                   <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
@@ -295,7 +295,7 @@ export default function Home() {
                     </div>
                     <div className="px-5 py-3">
                       <h3 className="text-gray-700 uppercase">Mulher Kit</h3>
-                      <span className="text-gray-500 mt-2">R$12</span>
+                      <span className="text-gray-500 mt-2">12</span>
                     </div>
                   </div>
                 </div>

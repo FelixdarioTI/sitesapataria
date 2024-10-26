@@ -30,7 +30,7 @@ export default function Home() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h6 className="font-medium text-xl leading-8 text-black mb-2">Air Jordan 1</h6>
-                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">R$124.99</h6>
+                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">124.99</h6>
                   </div>
                   <button
                     aria-label="Add to cart"
@@ -65,7 +65,7 @@ export default function Home() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h6 className="font-medium text-xl leading-8 text-black mb-2">Air Jordan 1</h6>
-                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">R$139.99</h6>
+                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">139.99</h6>
                   </div>
                   <button
                     aria-label="Add to cart"
@@ -103,7 +103,7 @@ export default function Home() {
                 <div className="flex items-start justify-between">
                   <div>
                     <h6 className="font-medium text-xl leading-8 text-black mb-2">Air Jordan 1</h6>
-                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">R$149.99</h6>
+                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">149.99</h6>
                   </div>
                   <button
                     aria-label="Add to cart"
