@@ -7,7 +7,7 @@ function Header(){
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState<number | null>(null);
   const [tabSelect, setTabSelect] = useState<number | null>(null);
-  const [history, setHistory] = useState(['Flowbite Components', 'Tailwind CSS Modal', 'React Tutorial']);
+  const [history, setHistory] = useState(['Air Jordan 1 Rosa', 'Air Jordan 1 Azul e Vermelho', 'Air Jordan 1 Azul']);
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
 const toggleMenuItem = (index: number) => {
@@ -17,20 +17,65 @@ const toggleMenuItem = (index: number) => {
   const toggleTab = (index: number) => {
     setTabSelect(tabSelect === index ? null : index);
   };
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenModal, setisOpenModal] = useState(false);
+  const [isOpenSidebar, setisOpenSidebar] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const toggleModal = () => {
-    setIsOpen(!isOpen);
+    setisOpenModal(!isOpenModal);
   };
-
+  const OpenSidebar = () => {
+    setisOpenSidebar(!isOpenSidebar);
+  };
   const handleSearch = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setHistory([searchQuery, ...history]); 
     setSearchQuery('');
   };
+  const initialCartItems = [
+    {
+      id: 1,
+      name: 'Air Jordan 1 Rosa',
+      category: 'Tênis',
+      price: 135.00,
+      quantity: 1,
+      imageUrl: 'https://images.unsplash.com/photo-1684381282765-7d991fdbf007?q=80&w=1883&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+      id: 2,
+      name: 'Air Jordan 1 Azul e Vermelho',
+      category: 'Tênis',
+      price: 135.00,
+      quantity: 2,
+      imageUrl: 'https://images.unsplash.com/photo-1612724189298-89d36b10b26d?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+      id: 3,
+      name: 'Air Jordan 1 Azul',
+      category: 'Tênis',
+      price: 135.00,
+      quantity: 1,
+      imageUrl: 'https://images.unsplash.com/photo-1693400652052-884f8dd3dfd9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+  ];
 
+  const [cartItems, setCartItems] = useState(initialCartItems);
+  
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  const updateQuantity = (id: number, newQuantity: any) => {
+    setCartItems(prevItems =>
+      prevItems
+        .map(item => item.id === id ? { ...item, quantity: newQuantity } : item)
+        .filter(item => item.quantity > 0) 
+    );
+  };
+
+  const getTotalItems = () => {
+    return cartItems.length;
+  };
   return(
+    <>
     <header className="relative bg-white">
           {mobileMenuOpen && (
             <div className="relative z-40 lg:hidden" role="dialog" aria-modal="true">
@@ -62,7 +107,7 @@ const toggleMenuItem = (index: number) => {
                           role="tab"
                           type="button"
                         >
-                          Tênis
+                          Masculino
                         </button>
                         <button
                           id="tabs-1-tab-1"
@@ -82,7 +127,7 @@ const toggleMenuItem = (index: number) => {
                           role="tab"
                           type="button"
                         >
-                          Masculino
+                          Infantil
                         </button>
                       </div>
                     </div>
@@ -155,10 +200,10 @@ const toggleMenuItem = (index: number) => {
 
                   <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                     <div className="flow-root">
-                      <a href="#" className="-m-2 block p-2 font-medium text-gray-900">Company</a>
+                      <a href="/login" className="-m-2 block p-2 font-medium text-gray-900">Login</a>
                     </div>
                     <div className="flow-root">
-                      <a href="#" className="-m-2 block p-2 font-medium text-gray-900">Stores</a>
+                      <a href="/cadastro" className="-m-2 block p-2 font-medium text-gray-900">Cadastro</a>
                     </div>
                   </div>
                 </div>
@@ -650,50 +695,87 @@ const toggleMenuItem = (index: number) => {
                       </svg>
                     </a>
                   </div>
-                  {isOpen && (
-
-
-<div id="authentication-modal" tabIndex={-1} aria-hidden="true" className="flex overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div className="relative p-2 w-full max-w-md max-h-full">
-       
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-           
-            <div className="flex items-center justify-between p-2 md:p-5 border-b rounded-t dark:border-gray-600">
-            <form onSubmit={handleSearch} className="relative mb-4">
-           <Search className="absolute left-3 top-3 h-5 w-5 text-gray-400" /> 
-           <input
-             type="text"
-             value={searchQuery}
-             onChange={(e) => setSearchQuery(e.target.value)}
-             className="border-none rounded-lg w-full pl-10 py-3 "
-             placeholder="Digite sua pesquisa..."
-             required
-           />
-         </form>
-                <button onClick={toggleModal} type="button" className="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
-                    <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    <span className="sr-only">Close modal</span>
-                </button>
-            </div>
-            <div className="p-4 md:p-5">
-            <h3 className="text-sm font-semibold text-gray-500 mb-2">Histórico</h3>
-           <ul className="space-y-2">
-             {history.map((item, index) => (
-               <li key={index} className="flex items-center bg-gray-100 px-4 py-2 rounded-md hover:bg-gray-200">
-                 <Clock className="h-5 w-5 text-gray-400 mr-3" /> {/* Ícone de relógio */}
-                 <span>{item}</span>
-               </li>
-             ))}
-           </ul>
-            </div>
+                  {isOpenModal && (
+                    <>
+                     <div className="fixed inset-0 bg-black opacity-50 z-40"></div>
+  <div
+    id="authentication-modal"
+    tabIndex={-1}
+    aria-hidden="true"
+    className="flex overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+  >
+    <div className="relative p-2 w-full max-w-xl max-h-full">
+      <div className="relative bg-white rounded-lg shadow dark:bg-gray-50">
+        <div className="flex items-center justify-between p-2 md:p-5 border-b rounded-t border-gray-300">
+          <form onSubmit={handleSearch} className="relative w-full">
+            <Search className="absolute top-3 h-5 w-5 text-gray-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className=" rounded-lg w-full pl-10 py-3 focus:outline-none focus:ring-0 focus:ring-blue-500"
+              placeholder="Digite sua pesquisa..."
+              required
+            />
+          </form>
+          <button
+            onClick={toggleModal}
+            type="button"
+            className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-2 flex justify-center items-center"
+            data-modal-hide="authentication-modal"
+          >
+            <svg
+              className="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span className="sr-only">Close modal</span>
+          </button>
         </div>
+
+        <div className="p-4 md:p-5">
+          <ul className="space-y-2">
+          {history.map((item, index) => (
+              <li
+                key={index}
+                className="flex items-center bg-gray-100 px-6 py-5 rounded-md hover:bg-gray-200 relative group"
+              >
+                <Clock className="h-5 w-5 text-gray-400 mr-3" />
+                <span>{item}</span>
+                
+                <svg
+                  className="w-4 h-4 text-gray-400 absolute right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+            ))}
+
+          </ul>
+        </div>
+      </div>
     </div>
-</div> 
-      )}
+  </div>
+  </>
+)}
+
                   <div className="ml-4 flow-root lg:ml-6">
-                    <a href="/carrinho" className="group -m-2 flex items-center p-2">
+                    <a href="#" className="group -m-2 flex items-center p-2" onClick={OpenSidebar}>
                         
                       <svg
                         className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
@@ -705,7 +787,7 @@ const toggleMenuItem = (index: number) => {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                       </svg>
-                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">{getTotalItems()}</span>
                       <span className="sr-only">items no carrinho</span>
                     </a>
                   </div>
@@ -714,6 +796,50 @@ const toggleMenuItem = (index: number) => {
           </div>
         </nav>
       </header>
+      {isOpenSidebar && (
+         <div className="fixed right-0 top-0 max-w-xs w-full z-30 h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
+         <div className="flex items-center justify-between">
+           <h3 className="text-2xl font-medium text-gray-700">Seu Carrinho</h3>
+           <button onClick={OpenSidebar} className="text-gray-600 focus:outline-none">
+             <svg className="h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+           </button>
+         </div>
+         <hr className="my-3" />
+         {cartItems.map((item) => (
+           <div key={item.id} className="flex justify-between mt-6">
+             <div className="flex">
+               <img className="h-20 w-20 object-cover rounded" src={item.imageUrl} alt={item.name} />
+               <div className="mx-3">
+                 <h3 className="text-sm text-gray-600">{item.name}</h3>
+                 <div className="flex items-center mt-2">
+                   <button onClick={() => updateQuantity(item.id, Math.max(0, item.quantity + 1))} className="text-gray-500 focus:outline-none focus:text-gray-600">
+                     <svg className="h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                       <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                     </svg>
+                   </button>
+                   <span className="text-gray-700 mx-2">{item.quantity}</span>
+                   <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="text-gray-500 focus:outline-none focus:text-gray-600">
+                     <svg className="h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                       <path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                     </svg>
+                   </button>
+                 </div>
+               </div>
+             </div>
+             <span className="text-gray-600">R${(item.price * item.quantity).toFixed(2)}</span>
+           </div>
+         ))}
+         <div className="flex justify-between mt-4">
+           <span className="font-bold">Total:</span>
+           <span className="text-gray-600">R${totalPrice.toFixed(2)}</span>
+         </div>
+         <a href='/carrinho' className="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+           <span>Checkout</span>
+           <svg className="h-5 w-5 mx-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+         </a>
+       </div>
+      )}
+     </>
   )
 }
 export default Header;

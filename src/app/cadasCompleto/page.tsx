@@ -16,13 +16,13 @@ export default function Home() {
       if (tabSelect < 3) {
         setTabSelect(tabSelect + 1);
       } else {
-        router.push('/confirmar');
+        router.push('/confirmarPedido');
       }
     };
-    const [cardNumber, setCardNumber] = useState("4256 4256 4256 4256");
-    const [expDate, setExpDate] = useState("12/24");
-    const [ccvNumber, setCcvNumber] = useState("342");
-    const [cardName, setCardName] = useState("John Doe");
+    const [cardNumber, setCardNumber] = useState("9999 9999 9999 9999");
+    const [expDate, setExpDate] = useState("12/12");
+    const [ccvNumber, setCcvNumber] = useState("999");
+    const [cardName, setCardName] = useState("Ducu gay");
     const [seeBack, setSeeBack] = useState(false);
   
     const toggleBackCard = () => setSeeBack(!seeBack);
@@ -161,7 +161,7 @@ export default function Home() {
                 <form className="bg-white w-full max-w-3xl mx-auto px-4 lg:px-6 py-8 shadow-md rounded-md flex flex-col lg:flex-row">
                 <div className="w-full lg:w-1/2 lg:pr-8 lg:border-r-2 lg:border-slate-300">
                   <div className="mb-4">
-                    <label className="text-neutral-800 font-bold text-sm mb-2 block">Card number:</label>
+                    <label className="text-neutral-800 font-bold text-sm mb-2 block">Número do Cartão:</label>
                     <input
                       id="cardNumber"
                       type="text"
@@ -175,7 +175,7 @@ export default function Home() {
                   </div>
                   <div className="flex gap-x-2 mb-4">
                     <div className="block">
-                      <label className="text-neutral-800 font-bold text-sm mb-2 block">Exp. date:</label>
+                      <label className="text-neutral-800 font-bold text-sm mb-2 block">Exp. data:</label>
                       <input
                         id="expDate"
                         type="text"
@@ -202,7 +202,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="mb-4">
-                    <label className="text-neutral-800 font-bold text-sm mb-2 block">Card holder:</label>
+                    <label className="text-neutral-800 font-bold text-sm mb-2 block">Nome no Cartão:</label>
                     <input
                       id="cardName"
                       type="text"

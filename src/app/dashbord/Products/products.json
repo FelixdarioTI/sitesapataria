@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Air Jordan 1",
+        "foto": "https://images.unsplash.com/photo-1693400652052-884f8dd3dfd9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Feminino",
+        "Marca":"Nike",
+        "tamanhos": "38,39,40,41",
+        "id": 192556,
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat vestibulum finibus, efficitur fusce proin pretium turpis libero hac suscipit rutrum mattis ac, sed nascetur lectus fames at blandit cras commodo et.",
+        "price": "149",
+        "discount": "Não"
+    },
+    {
+        "name": "Air Jordan 1",
+        "foto": "https://images.unsplash.com/photo-1693400652052-884f8dd3dfd9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Feminino",
+        "Marca":"Nike",
+        "tamanhos": "38,39,40,41",
+        "id": 193556,
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat vestibulum finibus, efficitur fusce proin pretium turpis libero hac suscipit rutrum mattis ac, sed nascetur lectus fames at blandit cras commodo et.",
+        "price": "149",
+        "discount": "30%"
+    },{
+        "name": "Air Jordan 1",
+        "foto": "https://images.unsplash.com/photo-1693400652052-884f8dd3dfd9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Feminino",
+        "Marca":"Nike",
+        "tamanhos": "38,39,40,41",
+        "id": 195556,
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat vestibulum finibus, efficitur fusce proin pretium turpis libero hac suscipit rutrum mattis ac, sed nascetur lectus fames at blandit cras commodo et.",
+        "price": "149",
+        "discount": "10%"
+    },{
+        "name": "Air Jordan 1",
+        "foto": "https://images.unsplash.com/photo-1693400652052-884f8dd3dfd9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Feminino",
+        "Marca":"Nike",
+        "tamanhos": "38,39,40,41",
+        "id": 196556,
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat vestibulum finibus, efficitur fusce proin pretium turpis libero hac suscipit rutrum mattis ac, sed nascetur lectus fames at blandit cras commodo et.",
+        "price": "149",
+        "discount": "Não"
+    }
+]

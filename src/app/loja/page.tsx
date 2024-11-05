@@ -11,14 +11,16 @@ export default function Home() {
         <Header />
 
         <section className="col-span-12 md:col-span-10">
-        <SearchProducts />
-
           <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
-            <h2 className="font-manrope font-bold text-3xl min-full:text-4xl text-black mb-8 max-lg:text-center">
-              Produtos
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Product Card */}
+
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-16">
+              
+              <div className="col-span-1 lg:col-span-1 p-4 rounded-lg">
+                <SearchProducts />
+              </div>
+
+              <div className="col-span-1 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
               <a href="/produto" className="max-w-full mx-auto">
                 <div className="w-full max-w-sm aspect-square">
                   <img
@@ -125,6 +127,7 @@ export default function Home() {
                   </button>
                 </div>
               </a>
+            </div>
             </div>
           </div>
         </section>

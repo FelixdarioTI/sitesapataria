@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Roberto Santos",
+    "avatar": "neil-sims.png",
+    "email": "roberto.santos@flowbite.com",
+    "CPF": "111.222.333-44",
+    "Data_nasc": "20/07/2000",
+    "country": "United States",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "name": "Roberta Casas",
+    "avatar": "roberta-casas.png",
+    "email": "roberta.casas@gmail.com",
+    "CPF": "111.222.333-44",
+    "Data_nasc": "09/09/1999",
+    "country": "Spain",
+    "status": "Active"
+  },
+  {
+    "id": 3,
+    "name": "Michael Alves",
+    "avatar": "michael-gough.png",
+    "email": "michael.alves@gmail.com",
+    "CPF": "111.222.333-44",
+    "Data_nasc": "02/02/2002",
+    "country": "United Kingdom",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "name": "Jose Leonardo",
+    "avatar": "jese-leos.png",
+    "email": "jose.leo@gmail.com",
+    "CPF": "111.222.333-44",
+    "Data_nasc": "08/10/2000",
+    "country": "United States",
+    "status": "Active"
+  }
+]

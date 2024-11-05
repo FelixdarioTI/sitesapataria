@@ -240,7 +240,7 @@ export default function Home() {
                       </button>
                     </div>
                     <div className="px-5 py-3">
-                      <h3 className="text-gray-700 uppercase">Homem Kit</h3>
+                      <h3 className="text-gray-700 uppercase">Kit Masculino</h3>
                       <span className="text-gray-500 mt-2">12</span>
                     </div>
                   </div>
@@ -294,7 +294,7 @@ export default function Home() {
                       </button>
                     </div>
                     <div className="px-5 py-3">
-                      <h3 className="text-gray-700 uppercase">Mulher Kit</h3>
+                      <h3 className="text-gray-700 uppercase">Kit Feminino</h3>
                       <span className="text-gray-500 mt-2">12</span>
                     </div>
                   </div>
