@@ -1,6 +1,6 @@
 "use client";
 import { Search, Clock, X } from 'lucide-react'; 
-import { AwaitedReactNode, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from 'react';
+import { AwaitedReactNode, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Logo from '../favicon.ico'
 function Header(){
@@ -18,9 +18,26 @@ const toggleMenuItem = (index: number) => {
     setTabSelect(tabSelect === index ? null : index);
   };
   const [isOpenModal, setisOpenModal] = useState(false);
+  const [isOpenUserDrop, setisOpenUserDrop] = useState(false);
   const [isOpenSidebar, setisOpenSidebar] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const toggleDropModal = () => {
+    setisOpenUserDrop(!isOpenUserDrop);
+  };
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setisOpenUserDrop(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   const toggleModal = () => {
     setisOpenModal(!isOpenModal);
   };
@@ -791,8 +808,47 @@ const toggleMenuItem = (index: number) => {
                       <span className="sr-only">items no carrinho</span>
                     </a>
                   </div>
+
+<button id="dropdownUserAvatarButton" onClick={toggleDropModal} className="flex text-sm bg-gray-800 rounded-full ml-5 md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
+<span className="sr-only">Open user menu</span>
+<img className="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo"/>
+</button>
+{isOpenUserDrop &&(
+    <div
+    id="dropdownAvatar"
+    ref={dropdownRef}
+    className="absolute z-30 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+    style={{ top: '100%', right: '40px' }}
+  >
+    <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+      <div>Nicolas Santos</div>
+      <div className="font-medium truncate">nicolassantos@gmail.com</div>
+    </div>
+    <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+      <li>
+        <a href="/dashbord" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="/dashbord/Users" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Users</a>
+      </li>
+      <li>
+        <a href="/dashbord/Products" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Produtos</a>
+      </li>
+
+      <li>
+        <a href="/config" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Configurações</a>
+      </li>
+    </ul>
+    <div className="py-2">
+      <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</a>
+    </div>
+  </div>
+)}
+
                   </div>
+                  
             </div>
+            
           </div>
         </nav>
       </header>
